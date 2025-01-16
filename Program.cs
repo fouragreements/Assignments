@@ -1,28 +1,18 @@
-﻿namespace assignment_qs3
+﻿namespace assignment_qs4
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //  user  input for distance and time
-            Console.Write("Enter distance in kilometers: ");
-            double distance = Convert.ToDouble(Console.ReadLine());
+            // Loop through values of y  ranging from -5 to 5
+            for (int y = -5; y <= 5; y++)
+            {
+                // Calculate x using the formula x = y^2 + 2y + 1
+                int x = y * y + 2 * y + 1;
 
-            Console.Write("Enter time in hours: ");
-            double time = Convert.ToDouble(Console.ReadLine());
-
-            // Calculate speed in kilometers per hour
-            double speedKmPerHour = distance / time;
-
-            // Convert distance to miles (1 km = 0.621371 miles)
-            double distanceInMiles = distance * 0.621371;
-
-            // Calculate speed in miles per hour
-            double speedMph = distanceInMiles / time;
-
-            // Display the results
-            Console.WriteLine($"Speed: {speedKmPerHour} kilometers per hour (km/h)");
-            Console.WriteLine($"Speed: {speedMph} miles per hour (mph)");
+                // Display the result
+                Console.WriteLine($"For y = {y}, x = {x}");
+            }
         }
     }
 }
